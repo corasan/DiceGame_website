@@ -2,7 +2,7 @@
 require_once("inc/config.php");
 include(ROOT_PATH . 'inc/header.php');
 
-if ($_SERVER["REQUEST_METHOD"]=="POST") 
+if ($_SERVER["REQUEST_METHOD"]=="POST")
 {
     if($_POST["firstname"] == "") {
     	$error_message = "You must specify a value for firstname";
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     }
     if(isset($error_message)) { ?>
     	<a href="signup.php" id="my_link">Go back to form</a> <!--make it possible to have the data in the form already when you go back-->
-    <?php 
+    <?php
     	exit();
     }
 
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 	//var_dump($_POST);
 	//Trim() deletes trailing whitespace from the beginning and end of the string
 	//ie: If someone hits enter, instead of entering a value or enters a space, the trim will take care of that
-	
+
 	if(isset($_POST["firstname"]) AND isset($_POST["lastname"])) {
 	$name = $firstname . " " . $lastname;
 	} else {
@@ -90,10 +90,10 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
         echo $error_message;
         exit();
     }
-    echo "Is the following information correct?" . "<br />"; 
-    echo "Name: " . $name . "<br />"; 
-	echo "Email: " . $email . "<br />"; 
-	echo "Username: " . $username . "<br />"; 
+    echo "Is the following information correct?" . "<br />";
+    echo "Name: " . $name . "<br />";
+	echo "Email: " . $email . "<br />";
+	echo "Username: " . $username . "<br />";
 	echo "Password: " . $password . "<br />"; ?>
 
 	<form class="form" id="confirmation" method="get" action="confirmation.php">
@@ -103,8 +103,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
 			<input id="submit" type="submit" name="submit" value="submit form">
 		</p>
 	</form>
-	<?php 
-} 
+	<?php
+}
     include(ROOT_PATH . 'inc/footer.php');
     ?>
 

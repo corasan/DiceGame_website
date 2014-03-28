@@ -10,10 +10,10 @@
 	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/klk.js"></script>
-		
+
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("#login-box").hide();	
+		$("#login-box").hide();
 		$( "#login" ).click(function() {
 			$( "#login-box" ).dialog( "open" );
 		});
@@ -22,9 +22,9 @@
 		});
 	});
 </script>
-	
+
 </head>
-	
+
 <body>
 		<button id="login">Login</button>
 </body>
