@@ -2,8 +2,8 @@
 include(ROOT_PATH . 'inc/header.php'); ?>
 
 <h2>Sign Up</h2>
-<div class="form">
-	<form id="signup_form" method="post" action="submission_success.php">
+<div class="signup-form">
+	<form id="signup" method="post" action="submission_success.php">
 		<p>
 			<br /><input id="name" type="text" name="firstname" size="30" placeholder="Name">
 			<span>Enter your first name</span>
@@ -32,7 +32,7 @@ include(ROOT_PATH . 'inc/header.php'); ?>
 </div>
 
 <script type="text/javascript">
-	$("form span").hide();
+	$("signup-form span").hide();
 	$("input, textarea").focus(function(){
 		$(this).next().fadeIn("slow");
 	}).blur(function(){
